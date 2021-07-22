@@ -118,7 +118,7 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public void testDoLoanCamcorder() {
+	public void testDoLoanCamcorder() { //Pei Shan
 		//fail("Not yet implemented");
 		// write your code here
 		
@@ -150,7 +150,7 @@ public class ResourceCentreTest {
 	}
 	
 	@Test
-	public void testDoLoanChromebook() {
+	public void testDoLoanChromebook() { //Pei Shan
 		//fail("Not yet implemented");
 		// write your code here
 		
