@@ -238,7 +238,6 @@ public class ResourceCentre {
 		} else {
 			System.out.println("Camcorder " + tag + " loaned out");
 		}
-		
 	}
 	
 	//================================= Option 4 Return an item (CRUD - Update)=================================
