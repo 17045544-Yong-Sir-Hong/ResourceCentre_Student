@@ -122,12 +122,63 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		
+		// Test if Item list is not null but empty, so that can loan a item
+		assertNotNull("Test if there is valid Camcorder arraylist to loan from", camcorderList); 
+		
+		ResourceCentre.addCamcorder(camcorderList, cc1);
+		// normal 
+		Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+		//System.out.println("Normal");
+		//System.out.println(ok);
+		assertTrue("Test if an available item is ok to loan?", ok);
+		//error condition
+		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+		//System.out.println("Error");
+	    //System.out.println(ok);
+		assertFalse("Test if an same item is NOT ok to loan?", ok);
+		//error condition
+		ResourceCentre.addCamcorder(camcorderList,  cc2);
+		cc2.setIsAvailable(false);
+		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0012", "8-8-2020" );
+		//System.out.println("Error2");
+		//System.out.println(ok);
+		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		//error condition
+		ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0013", "8-8-2020" );
+		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
+		
 	}
 	
 	@Test
 	public void testDoLoanChromebook() {
 		//fail("Not yet implemented");
 		// write your code here
+		
+		// Test if Item list is not null but empty, so that can loan a item
+		assertNotNull("Test if there is valid Chromebook arraylist to loan from", chromebookList); 
+				
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		// normal 
+		Boolean ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
+		//System.out.println("Normal");
+		//System.out.println(ok);
+		assertTrue("Test if an available item is ok to loan?", ok);
+		//error condition
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0011", "8-8-2020" );
+		//System.out.println("Error");
+	    //System.out.println(ok);
+		assertFalse("Test if an same item is NOT ok to loan?", ok);
+		//error condition
+		ResourceCentre.addChromebook(chromebookList,  cb2);
+		cc2.setIsAvailable(false);
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0012", "8-8-2020" );
+		//System.out.println("Error2");
+		//System.out.println(ok);
+		assertFalse("Test that un-available item is NOT ok to loan?", ok);
+		//error condition
+		ok = ResourceCentre.doLoanChromebook(chromebookList, "CB0013", "8-8-2020" );
+		assertFalse("Test that non-existing item is NOT ok to loan?", ok);
+		
 	}
 	
 	@Test
