@@ -144,6 +144,7 @@ public class ResourceCentre {
 	}
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) { // Sir Hong
+
 		String output = "";
 		// write your code here
 		for (int i = 0; i < chromebookList.size(); i++)
@@ -153,6 +154,7 @@ public class ResourceCentre {
 		}
 		return output;
 	}
+
 	
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) { // Sir Hong
 		ResourceCentre.setHeader("CHROMEBOOK LIST");
