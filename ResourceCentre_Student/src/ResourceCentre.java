@@ -144,18 +144,7 @@ public class ResourceCentre {
 	}
 
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) { // Sir Hong
-		String output = "";
-		// write your code here
-<<<<<<< HEAD
-=======
-		for (int i = 0; i < chromebookList.size(); i++)
-		{
-			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", chromebookList.get(i).getAssetTag(), chromebookList.get(i).getDescription(), 
-					ResourceCentre.showAvailability(chromebookList.get(i).getIsAvailable()), chromebookList.get(i).getDueDate(), chromebookList.get(i).getOs());
-		}
->>>>>>> branch 'master' of https://github.com/17045544-Yong-Sir-Hong/ResourceCentre_Student.git
-		return output;
-	}
+
 	
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
 		
